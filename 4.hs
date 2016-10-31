@@ -18,8 +18,6 @@ showd :: Date -> String
 
 showd d = "Date: " ++ show(day d) ++ "/" ++ show(month d) ++ "/" ++ show(year d)
 
-before :: (Date,Date) -> Bool
-
 -- assumption that for equal dates outputs false
 
 before :: (Date,Date) -> Bool
