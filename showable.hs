@@ -32,7 +32,8 @@ shown (Succ x) = "(" ++ shown x ++ "+ 1)"
 
 data List a = Nil | Cons a (List a) deriving(Show)
 
-writec :: Show a => List a -> String
+writec :: List a -> String
+writec Nil = "[]""
 writec (Cons x l) = x ++ ": (" ++ writec l ++ ")"
 
 
