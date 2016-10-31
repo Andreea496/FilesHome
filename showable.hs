@@ -7,11 +7,11 @@
 --				f (Cons x Nil) = (show x) ++ "]"
 --				f (Cons x l) = (show x) ++ "," ++ (f l)
 
-ord3 :: (Bool3, Bool3) -> Bool3
-ord3 (U, ) = T
-ord3 (T, T) = T
-ord3 (F, F) = T
-ord3 = F
+--ord3 :: (Bool3, Bool3) -> Bool3
+--ord3 (U, ) = T
+--ord3 (T, T) = T
+--ord3 (F, F) = T
+--ord3 = F
 
 data Bool3 = T | F | U
 
