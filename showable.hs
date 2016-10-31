@@ -13,7 +13,7 @@
 --ord3 (F, F) = T
 --ord3 = F
 
-data Bool3 = T | F | U
+data Bool3 = T | F | U deriving(Eq)
 
 write3 :: Bool3 -> String
 write3 x | x == T = show(True)
