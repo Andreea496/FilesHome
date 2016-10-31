@@ -16,6 +16,6 @@ ord3 = F
 data Bool3 = T | F | U
 
 write3 :: Bool3 -> String
-write3 x | x == T = show("True")
-		 | x == F = show("False")
-		 | x == U = show("Unkown")
+write3 x | x == T = show(True)
+		 | x == F = show(False)
+		 | x == U = show(Unkown)
