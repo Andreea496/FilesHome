@@ -14,5 +14,5 @@ data Nat = Zero | Succ Nat
 
 addNat :: Nat -> Nat -> Nat
 addNat n Zero = n
-addNat n (Succ m) = Succ (add n m) 
+addNat n (Succ m) = Succ (addNat n m) 
 
