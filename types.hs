@@ -28,3 +28,9 @@ append :: List a -> List a -> List a
 append Nil ys = ys
 append (Cons x (xs)) ys = Cons x (append xs ys)
 
+
+preorder :: Btee a -> a
+preorder Nil = Nil
+preorder (Leaf n) = n
+preorder (n a b) = Cons n (Cons (preorder a) Cons(preorder b))
+
