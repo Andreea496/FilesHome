@@ -30,3 +30,10 @@ shown :: Nat -> String
 shown Zero = "0"
 shown (Succ x) = "(" ++ shown x ++ "+ 1)"
 
+data List a = Nil | Cons a (List a) deriving(Show)
+
+writec :: List a => String
+
+writec Nil = "[]"
+writec (Cons a l) = a ++ ":(" ++ writec l ++ ")"
+
