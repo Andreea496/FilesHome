@@ -20,3 +20,7 @@ natToInteger :: Nat -> Integer
 natToInteger Zero = 0
 natToInteger (Succ n) = 1 + natToInteger n 
 
+leng :: List a -> Int
+leng Nil = 0
+leng (Cons x l) = 1 + leng l
+
