@@ -1,9 +1,6 @@
 data Date = Date {
 	day :: Int,
 	month :: Int,
-	year :: Intdata Date = Date {
-	day :: Int,
-	month :: Int,
 	year :: Int
 } deriving(Show, Read)
 
