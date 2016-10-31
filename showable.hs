@@ -19,3 +19,14 @@ write3 :: Bool3 -> String
 write3 x | x == T = show(True)
 		 | x == F = show(False)
 		 | x == U = show "Unkown"
+
+data Nat = Zero | Succ Nat deriving(Show)
+
+natToInteger :: Nat -> Integer
+natToInteger Zero = 0
+natToInteger (Succ n) = 1 + natToInteger n 
+
+shown :: Nat -> String
+shown Zero = "0"
+shown (Succ x) = "(" ++ "x" ++ "+ 1)"
+
