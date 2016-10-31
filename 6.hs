@@ -18,24 +18,17 @@ showd :: Date -> String
 
 showd d = "Date: " ++ show(day d) ++ "/" ++ show(month d) ++ "/" ++ show(year d)
 
-before :: (Date,Date) -> Bool
+-- assumption that for equal dates outputs false
 
+before :: (Date,Date) -> Bool
 before (d1, d2) | year d1 < year d2 = True
-				| year d1 > year d2 = False
-				| month d1 < month d2 = True
-				| month d1 > month d2 = False
-				| day d1 < day d2 = True
-				| day d1 > day d2 = False
+				| (year d1 == year d2) && (month d1 < month d2) = True
+				| (year d1 == year d2) && (month d1 == month d2) && (day d1 < day d2) = True
 				| otherwise = False
 
 
-data Form = F1 
-		   |F2
-		   |F3
-		   |F4
-		   |F5
-		   |F6
-  deriving(Show)
+data Form = F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10 |F11 |F12 |F13 |F14 |F15 |F16 |F17 |F18 |F19 |F20
+		    |F21 |F22 |F23 |F24 |F25 |F26 |F27 |F28 |F29 |F30 |F31 |F32 |F33 |F34 |F35 |F36 |F37 |F38 |F39 |F40 deriving(Show)
 
 
 data Event = Event{
@@ -51,4 +44,4 @@ data History = History{
 	av_gaps :: Float
 }deriving(Show)
 
-history :: History
+-- history :: History

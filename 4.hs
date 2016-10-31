@@ -20,10 +20,10 @@ showd d = "Date: " ++ show(day d) ++ "/" ++ show(month d) ++ "/" ++ show(year d)
 
 before :: (Date,Date) -> Bool
 
+-- assumption that for equal dates outputs false
+
+before :: (Date,Date) -> Bool
 before (d1, d2) | year d1 < year d2 = True
-				| year d1 > year d2 = False
-				| month d1 < month d2 = True
-				| month d1 > month d2 = False
-				| day d1 < day d2 = True
-				| day d1 > day d2 = False
+				| (year d1 == year d2) && (month d1 < month d2) = True
+				| (year d1 == year d2) && (month d1 == month d2) && (day d1 < day d2) = True
 				| otherwise = False
