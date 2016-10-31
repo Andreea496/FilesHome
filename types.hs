@@ -26,5 +26,5 @@ leng (Cons x l) = 1 + leng l
 
 append :: List a -> List a -> List a
 append Nil ys = ys
-append (x:xs) ys = Cons x append xs ys
+append (x:xs) ys = Cons x (append xs ys)
 
