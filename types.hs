@@ -16,3 +16,7 @@ addNat :: Nat -> Nat -> Nat
 addNat n Zero = n
 addNat n (Succ m) = Succ (addNat n m) 
 
+natToInteger :: Nat -> Integer
+natToInteger Zero = 0
+natToInteger (Succ n) = 1 + natToInteger n 
+
