@@ -24,3 +24,8 @@ leng :: List a -> Int
 leng Nil = 0
 leng (Cons x l) = 1 + leng l
 
+append :: List a -> List a -> List a
+append Nil Nil = error "No appending"
+append Nil _ = _
+append l x = l ++ x
+
