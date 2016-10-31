@@ -1,4 +1,4 @@
-data List a = Nil | Cons a (List a)
+data List a = Nil | Cons a (List a) deriving(Show)
 
 hd :: List a -> a
 hd Nil = error "Nil does not have a had"
