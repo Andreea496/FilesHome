@@ -1,11 +1,11 @@
-{- Infix show function for List a -}
-write :: Show a => List a -> String
-write l = [ : (f l)
-				where
-				f :: Show a => List a -> String
-				f Nil = "]"
-				f (Cons x Nil) = (show x) ++ "]"
-				f (Cons x l) = (show x) ++ "," ++ (f l)
+--{- Infix show function for List a -}
+--write :: Show a => List a -> String
+--write l = [ : (f l)
+--				where
+--				f :: Show a => List a -> String
+--				f Nil = "]"
+--				f (Cons x Nil) = (show x) ++ "]"
+--				f (Cons x l) = (show x) ++ "," ++ (f l)
 
 ord3 :: (Bool3, Bool3) -> Bool3
 ord3 (U, ) = T
