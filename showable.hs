@@ -28,5 +28,5 @@ natToInteger (Succ n) = 1 + natToInteger n
 
 shown :: Nat -> String
 shown Zero = "0"
-shown (Succ x) = "(" ++ "x" ++ "+ 1)"
+shown (Succ x) = "(" ++ x ++ "+ 1)"
 
