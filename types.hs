@@ -10,7 +10,7 @@ tl (Cons _ l) = l
 
 data Btree a = Leaf a | L (Btree a) a | R a (Btree a) | LR (Btree a) a (Btree a)
 
-data Nat = Zero | Succ Nat
+data Nat = Zero | Succ Nat deriving(Show)
 
 addNat :: Nat -> Nat -> Nat
 addNat n Zero = n
