@@ -27,5 +27,5 @@ leng (Cons x l) = 1 + leng l
 append :: List a -> List a -> List a
 append Nil Nil = error "No appending"
 append Nil x = x
-append l x = l ++ x
+append l x = l (++) x
 
