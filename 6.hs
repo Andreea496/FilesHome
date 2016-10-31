@@ -4,6 +4,11 @@ data Date = Date {
 	year :: Int
 } deriving(Show, Read)
 
+leapCheck :: Int -> Bool
+
+leapCheck y | (y `mod` 4 == 0 && y `mod` 100 /= 0) || (y `mod` 400 == 0) = True
+			| otherwise = False
+
 addDate :: Int -> Int -> Int -> Date
 
 addDate d m y | d < 0 || d > 31 = error "Inavlid day"

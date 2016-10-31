@@ -7,6 +7,7 @@ data Date = Date {
 leapCheck :: Int -> Bool
 
 leapCheck y | (y `mod` 4 == 0 && y `mod` 100 /= 0) || (y `mod` 400 == 0) = True
+			| otherwise = False
 
 addDate :: Int -> Int -> Int -> Date
 
