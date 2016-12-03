@@ -1,3 +1,0 @@
--- tree traversals/pag 7
--- why inferred type not general enough -- writec for lists/7
--- do the tree prob/7
